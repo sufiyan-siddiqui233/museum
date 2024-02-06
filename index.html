@@ -175,6 +175,42 @@ svg:hover {
     border-radius: 10px;
   }
 }
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: #e4dbdb;
+}
+
+.card-section {
+    padding: 20px;
+}
+
+.card-section h2 {
+    margin-top: 0;
+}
+
+.card-section input[type="file"],
+.card-section button {
+    margin-bottom: 10px;
+}
+
+.card-section button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-section button:hover {
+    background-color: #0056b3;
+}
+
 </style>
 
 
@@ -232,11 +268,11 @@ svg:hover {
 
 
    
- <h1>Check your coin here</h1>
+ <h1 style="text-align: center;">Check your coin here</h1>
             <!-- Navigation links go here -->
        
     
-        <section id="upload-section">
+        <!-- <section id="upload-section">
             <h2>Upload Your Coin Image</h2>
             <input type="file" id="coinImage" accept="image/*">
             <button onclick="detectCoin()">Detect Coin</button>
@@ -249,7 +285,26 @@ svg:hover {
             <button onclick="predictPrice()">Predict Price</button>
             <p id="predictedPrice"></p>
         </section>
-    
+     -->
+     <div class="card">
+      <section id="upload-section" class="card-section">
+          <h2>Upload Your Coin Image</h2>
+          <br><br>
+          <input type="file" id="coinImage" accept="image/*">
+          <button onclick="detectCoin()">Detect Coin</button>
+      </section>
+  </div>
+  
+  <div class="card">
+      <section id="coin-details" class="card-section">
+          <h2>Coin Details</h2>
+          <div id="coinImageDisplay"></div>
+          <p id="coinAttributes"></p>
+          <button onclick="predictPrice()">Predict Price</button>
+          <p id="predictedPrice"></p>
+      </section>
+  </div>
+  
        
 
     <section id="seven" class="goblack">
